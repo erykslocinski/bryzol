@@ -95,8 +95,8 @@ div.menu-socials {
   justify-content: center;
 }
 
-i.fa-envelope,
-i.fa-facebook {
+.menu-socials i.fa-envelope,
+.menu-socials i.fa-facebook {
   display: block;
   margin: 0 10px;
   font-size: 5rem;
@@ -232,7 +232,6 @@ nav a:hover {
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
   padding: 12px 20px;
   position: absolute;
   left: 50%;
@@ -248,6 +247,7 @@ nav a:hover {
 .text p,
 .text button {
   font-family: 'Roboto', sans-serif;
+  color: #f2f2f2;
 }
 
 .text h2 {
@@ -359,7 +359,85 @@ section article.offer:nth-child(3) {
   background-color: green;
 }
 
+/* FOOTER */
+
 footer {
-  height: 100vh;
-  background-color: red;
+  background: #000 url("../img/footer-bg.png") repeat;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  color: #f2f2f2;
+}
+
+footer>* {
+  flex-basis: 100%;
+}
+
+footer h3 {
+  font-size: 3.5rem;
+  padding: 30px 0 20px;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  position: relative;
+}
+
+footer h3::after {
+  content: "";
+  height: 3px;
+  width: 60%;
+  position: absolute;
+  top: 7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+}
+
+#map {
+  width: 100%;
+  height: 80vh;
+  background-color: grey;
+}
+
+.address-footer {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  text-align: center;
+}
+
+.address-footer i {
+  margin: 20px 0 6px;
+  font-size: 4rem;
+}
+
+.address-footer p {
+  font-size: 3rem;
+}
+
+section.copy {
+  margin-top: 30px;
+  width: 100%;
+  height: 20vh;
+  border-top: 2px solid #575836;
+  background-color: #2e300f;
+  font-size: 2.4rem;
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  color: #858660;
+}
+
+.copy p span {
+  color: #F7DBA7;
+}
+
+.copy p a {
+  text-decoration: none;
+  color: #858660;
+
 }
