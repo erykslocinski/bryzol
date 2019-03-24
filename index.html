@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bryzol Catering Żory</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=latin-ext" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -79,34 +79,43 @@
     </div>
   </header>
 
+  <article class="about">
+    <h2>Krótko o nas</h2>
+    <a href="#"></a><img src="img/logo-bryzol-strona-300x300.png" alt="Bryzol Catering Żory"></a>
+    <p>Bryzol Catering to firma oferująca usługi cateringu zarówno słonego, jak i słodkiego. Wszelkie oferty tworzone
+      są pod potrzeby Klienta. Firmę stworzyli dwaj pasjonaci. Jeden lubuje się w gotowaniu i tworzeniu nowoczesnych w
+      formie dań ze znanych nam klasyków. Drugi za to wymyśla grzechu warte desery i torty.
+      <button><i class="far fa-address-card"></i>Poznaj nas!</button>
+    </p>
+  </article>
 
-  <section class="offers">
-    <article class="offer">
-      <figure></figure>
-      <h1></h1>
-      <p></p>
-    </article>
-
-    <article class="offer">
-      <figure></figure>
-      <h1></h1>
-      <p></p>
-    </article>
-
-    <article class="offer">
-      <figure></figure>
-      <h1></h1>
-      <p></p>
-    </article>
+  <section class="partners">
+    <h3>Partnerzy</h3>
+    <div class="slider">
+      <div class="slide current">
+        <div class="content"></div>
+      </div>
+      <div class="slide">
+        <div class="content"></div>
+      </div>
+      <div class="slide">
+        <div class="content"></div>
+      </div>
+    </div>
+    <div class="buttons">
+      <button id="prev"><i class="fas fa-arrow-left"></i></button>
+      <button id="next"><i class="fas fa-arrow-right"></i></button>
+    </div>
   </section>
 
-  <footer>
-    <h3>Znajdź nas!</h3>
-    <!--The div element for the map -->
+  <section class="map">
+    <h3>Znajdź nas</h3>
     <div id="map"></div>
+  </section>
 
-    <h3>Kontakt</h3>
-    <section class="address-footer">
+  <section class="contact">
+    <div class="address-wrap">
+      <h3>Kontakt</h3>
       <div class="address">
         <i class="fas fa-map-marker-alt"></i>
         <p>ul. Bramkowa 3</p>
@@ -120,12 +129,14 @@
       </div>
       <div class="email">
         <i class="fas fa-envelope"></i>
-        <p>kontakt@bryzol.pl</p>
+        <p><a href="mailto:kontakt@bryzol.pl">kontakt@bryzol.pl</a></p>
       </div>
-    </section>
+    </div>
+  </section>
+  <footer>
     <section class="copy">
-      <p>Stworzono dla <span>Bryzol Catering</span></p>
-      <p>&copy; 2019 <a href="http://erykslocinski.pl">erykslocinski.pl</a></p>
+      <p>Stworzono dla <a href="http://bryzol.pl/"><span>Bryzol Catering</span></a></p>
+      <p>&copy; 2019</p>
     </section>
   </footer>
 
@@ -133,7 +144,9 @@
   <script src="js/menu-burger.js"></script>
   <script src="js/slideshow.js"></script>
   <script src="js/gmaps.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCE_EfFijcmiSdcMM7wJlYN789-ugSMuI8&callback=initMap">
+  <script src="js/partners-slider.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCE_EfFijcmiSdcMM7wJlYN789-ugSMuI8&callback=initMap">
   </script>
 </body>
 
