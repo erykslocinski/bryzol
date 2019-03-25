@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="css/flickity.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -16,7 +17,7 @@
   <header>
     <div class="top">
       <div class="logo">
-        <a href="#"><img src="img/logo-mobile-150x150.png" alt="Bryzol Catering Żory"></a>
+        <a href="index.html"><img src="img/logo-mobile-150x150.png" alt="Bryzol Catering Żory"></a>
       </div>
       <div class="burger">
         <i class="fas fa-bars"></i>
@@ -36,46 +37,38 @@
         </ul>
       </nav>
     </div>
-    <!-- SlidesJS Required: Start Slides -->
-    <!-- The container is used to define the width of the slideshow -->
-    <div class="slideshow-container">
-
-      <div class="mySlides fade">
-        <img src="img/1.jpg">
-        <div class="text">
-          <h2>Jedzenie i słodkości na każdą okazję</h2>
-          <p>Bryzol Catering to firma oferująca usługi cateringu zarówno słonego, jak i słodkiego. Wszelkie oferty
-            tworzone są pod potrzeby Klienta.</p>
-          <button>Sprawdź ofertę</button>
+    <div class="slider">
+      <div class="slide current">
+        <div class="content">
+          <h1>1</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit hic
+            maxime, voluptatibus labore doloremque vero!
+          </p>
         </div>
       </div>
-
-      <div class="mySlides fade">
-        <img src="img/2.jpg">
-        <div class="text">
-          <h2>Blachy biesiadne</h2>
-          <p>W swojej ofercie mamy również blachy biesiadne, czyli gotowe zestawy na 8-10 osób.</p>
-          <p>Kilknij i sprawdź!</p>
-          <button>Blachy biesiadne</button>
+      <div class="slide">
+        <div class="content">
+          <h1>2</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit hic
+            maxime, voluptatibus labore doloremque vero!
+          </p>
         </div>
       </div>
-
-      <div class="mySlides fade">
-        <img src="img/3.jpg">
-        <div class="text">
-          <h2>Słodkości</h2>
-          <p>W swojej ofercie mamy również blachy biesiadne, czyli gotowe zestawy na 8-10 osób.</p>
-          <button>Słodkości</button>
+      <div class="slide">
+        <div class="content">
+          <h1>3</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit hic
+            maxime, voluptatibus labore doloremque vero!
+          </p>
         </div>
       </div>
-
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      <div class="dots">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-      </div>
+    </div>
+    <div class="buttons">
+      <button class="prev"><i class="fas fa-arrow-left"></i></button>
+      <button class="next"><i class="fas fa-arrow-right"></i></button>
     </div>
   </header>
 
@@ -91,21 +84,10 @@
 
   <section class="partners">
     <h3>Partnerzy</h3>
-    <div class="slider">
-      <div class="slide current"></div>
-      <div class="slide"></div>
-      <div class="slide"></div>
-    </div>
-
-    <div class="partners-dots">
-      <div class="partners-dot active"></div>
-      <div class="partners-dot"></div>
-      <div class="partners-dot"></div>
-    </div>
-
-    <div class="buttons">
-      <button id="prev"><i class="fas fa-arrow-left"></i></button>
-      <button id="next"><i class="fas fa-arrow-right"></i></button>
+    <div class="gallery js-flickity">
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
     </div>
   </section>
 
@@ -143,9 +125,9 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/menu-burger.js"></script>
-  <script src="js/slideshow.js"></script>
   <script src="js/gmaps.js"></script>
-  <script src="js/partners-slider.js"></script>
+  <script src="js/flickity.pkgd.min.js"></script>
+  <script src="js/main-slider.js"></script>
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCE_EfFijcmiSdcMM7wJlYN789-ugSMuI8&callback=initMap">
   </script>

@@ -180,163 +180,118 @@ nav a:hover {
 
 }
 
-/* SLIDESHOW CONTAINER */
+/* SLIDER */
 
-.mySlides {
-  display: none;
-  height: 100%;
-  width: 100%;
-}
-
-.mySlides img {
-  background-position: center;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-}
-
-.slideshow-container {
-  height: 80vh;
-  width: 100%;
-  overflow: hidden;
+header .slider {
   position: relative;
-  top: 0;
+  overflow: hidden;
   margin-top: 20vh;
-  left: 0;
+  height: 80vh;
+  width: 100vw;
 }
 
-/* NEXT & PREVIOUS BUTTON */
-.prev,
-.next {
-  cursor: pointer;
+header .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+header .slide.current {
+  opacity: 1;
+}
+
+header .slide .content {
+  position: absolute;
+  bottom: 70px;
+  left: -600px;
+  opacity: 0;
+  width: 600px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  padding: 35px;
+  font-family: 'Roboto', sans-serif;
+}
+
+header .slide .content h1 {
+  margin-bottom: 10px;
+  font-size: 4rem;
+}
+
+header .slide .content p {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+header .slide.current .content {
+  opacity: 1;
+  transform: translateX(600px);
+  transition: all 0.7s ease-in-out 0.3s;
+}
+
+header .buttons button.next {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+  right: 15px;
 }
 
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* TEXT */
-.text {
-  padding: 12px 20px;
+header .buttons button.prev {
   position: absolute;
-  left: 50%;
-  bottom: 10%;
-  transform: translateX(-50%);
-  width: 80%;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+  top: 50%;
+  left: 15px;
 }
 
-.text h2,
-.text p,
-.text button {
-  font-family: 'Roboto', sans-serif;
-  color: #f2f2f2;
+header .buttons button {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  padding: 13px 15px;
+  border-radius: 50%;
+  outline: none;
 }
 
-.text h2 {
-  text-transform: uppercase;
-  font-size: 2.6rem;
-  margin-bottom: 10px;
-  padding: 4px 10px;
+header .buttons button:hover {
+  background-color: #fff;
+  color: #333;
 }
 
-.text p {
-  font-weight: 300;
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-  text-align: center;
-}
+@media (max-width: 500px) {
+  header .slide .content {
+    bottom: -300px;
+    left: 0;
+    width: 100%;
+  }
 
-.text button {
-  padding: 5px 10px;
-  font-size: 2rem;
-  text-transform: uppercase;
-  background-color: #575836;
-  color: #F7DBA7;
-  border: 0;
-  box-shadow: 0 6px 6px -6px black;
-  transition: 0.2s linear;
-}
+  header .slide.current .content {
+    transform: translateY(-300px);
+  }
 
-@media (orientation: portrait) and (min-height: 768px) {
-  .text h2 {
+  header .slide .content h1 {
     font-size: 3rem;
   }
 
-  .text p {
-    font-size: 2rem;
-  }
-
-  .text button {
-    font-size: 2.6rem;
+  header .slide .content p {
+    margin-bottom: 10px;
+    font-size: 1.6rem;
   }
 }
 
-.text button:hover {
-  background-color: #2e300f;
-  color: white;
-  cursor: pointer;
+/* SLIDER IMAGES */
+
+header .slide:first-child {
+  background: url('../img/1.jpg') no-repeat center right/cover;
 }
 
-/* DOTS */
-.dots {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
+header .slide:nth-child(2) {
+  background: url('../img/2.jpg') no-repeat center center/cover;
 }
 
-.dot {
-  cursor: pointer;
-  height: 2vh;
-  width: 2vh;
-  margin: 0 2px;
-  background-color: #666;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.dot.active,
-.dot:hover {
-  background-color: #fff;
-}
-
-/* FADING ANIMATION */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {
-    opacity: .4
-  }
-
-  to {
-    opacity: 1
-  }
+header .slide:nth-child(3) {
+  background: url('../img/3.jpg') no-repeat center center/cover;
 }
 
 /* ABOUT */
@@ -420,92 +375,28 @@ section.partners {
   padding: 30px 0 50px;
 }
 
-section.partners .slider {
-  position: relative;
-  overflow: hidden;
-  height: 200px;
-  max-width: 300px;
-  margin: 0 auto;
+.gallery {
+  background: #fff;
 }
 
-section.partners .slide {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.gallery-cell:first-child {
   width: 200px;
   height: 200px;
-  opacity: 0;
-  transition: opacity .5s linear;
-}
-
-section.partners .slide.current {
-  opacity: 1;
-}
-
-section.partners .buttons {
-  position: relative;
-  padding: 20px 0 10px;
-}
-
-.buttons button#next {
-  position: absolute;
-  top: 0;
-  right: 30%;
-}
-
-.buttons button#prev {
-  position: absolute;
-  top: 0;
-  left: 30%;
-}
-
-.buttons button {
-  border: 2px solid #333;
-  background-color: transparent;
-  color: #333;
-  cursor: pointer;
-  padding: 13px 15px;
-  border-radius: 50%;
-  outline: none;
-  transition: .2s ease-in-out;
-}
-
-.buttons button:hover {
-  background-color: #333;
-  color: white;
-}
-
-section.partners .partners-dots {
-  position: relative;
-  text-align: center;
-}
-
-section.partners .partners-dot {
-  cursor: pointer;
-  height: 10px;
-  width: 10px;
-  margin: 10px 5px 0;
-  background-color: #888;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-section.partners .partners-dot.active,
-section.partners .partners-dot:hover {
-  background-color: #000;
-}
-
-section.partners .slide:first-child {
+  margin-left: 50px;
   background: url('../img/logo-mobile-150x150.png') no-repeat center center/cover;
 }
 
-section.partners .slide:nth-child(2) {
-  background: url('../img/slocinski-logo.png') no-repeat center center/cover;
+.gallery-cell:nth-child(2) {
   width: 300px;
+  height: 200px;
+  background: url('../img/slocinski-logo.png') no-repeat center center/cover;
 }
 
-section.partners .slide:nth-child(3) {
+.gallery-cell:nth-child(3) {
+  width: 200px;
+  height: 200px;
+  margin-right: 10px;
+  margin-left: 50px;
   background: url('../img/logo-bryzol-strona-300x300.png') no-repeat center center/cover;
 }
 
@@ -552,17 +443,6 @@ section.contact h3 {
   color: #f2f2f2;
   text-transform: uppercase;
 }
-
-/* section.contact h3::after {
-  content: "";
-  height: 3px;
-  width: 60%;
-  position: absolute;
-  top: 7rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: white;
-} */
 
 section.contact .address-wrap {
   max-width: 1600px;

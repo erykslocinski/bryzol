@@ -1,15 +1,13 @@
-const slides = document.querySelectorAll('.slide');
-const next = document.querySelector('#next');
-const prev = document.querySelector('#prev');
-const partnersDot = document.querySelectorAll('.partners-dot');
+const slides = document.querySelectorAll('header .slide');
+const next = document.querySelector('header .next');
+const prev = document.querySelector('header .prev');
 const auto = true; // Auto scroll
-const intervalTime = 5000;
+const intervalTime = 10000;
 let slideInterval;
 
 const nextSlide = () => {
   // Get current class
   const current = document.querySelector('.current');
-
   // Remove current class
   current.classList.remove('current');
   // Check for next slide
@@ -26,7 +24,6 @@ const nextSlide = () => {
 const prevSlide = () => {
   // Get current class
   const current = document.querySelector('.current');
-
   // Remove current class
   current.classList.remove('current');
   // Check for prev slide
