@@ -1,6 +1,7 @@
 const slides = document.querySelectorAll('.slide');
 const next = document.querySelector('#next');
 const prev = document.querySelector('#prev');
+const partnersDot = document.querySelectorAll('.partners-dot');
 const auto = true; // Auto scroll
 const intervalTime = 5000;
 let slideInterval;
@@ -8,6 +9,7 @@ let slideInterval;
 const nextSlide = () => {
   // Get current class
   const current = document.querySelector('.current');
+
   // Remove current class
   current.classList.remove('current');
   // Check for next slide
@@ -24,6 +26,7 @@ const nextSlide = () => {
 const prevSlide = () => {
   // Get current class
   const current = document.querySelector('.current');
+
   // Remove current class
   current.classList.remove('current');
   // Check for prev slide
