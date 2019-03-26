@@ -1,5 +1,7 @@
 /*
   font-family: 'Roboto', sans-serif;
+  font-family: 'Pacifico', cursive;
+  font-family: 'Open Sans', sans-serif;
 */
 
 * {
@@ -10,6 +12,7 @@
 
 :root {
   font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 body {
@@ -187,7 +190,7 @@ header .slider {
   overflow: hidden;
   margin-top: 20vh;
   height: 80vh;
-  width: 100vw;
+  width: 100%;
 }
 
 header .slide {
@@ -206,25 +209,30 @@ header .slide.current {
 
 header .slide .content {
   position: absolute;
-  bottom: 70px;
+  bottom: 20px;
   left: -600px;
   opacity: 0;
   width: 600px;
   background-color: rgba(255, 255, 255, 0.8);
   color: #333;
-  padding: 35px;
+  padding: 15px 35px;
   font-family: 'Roboto', sans-serif;
+  /* font-family: 'Pacifico', cursive; */
 }
 
 header .slide .content h1 {
   margin-bottom: 10px;
-  font-size: 4rem;
+  font-size: 3rem;
+  color: #2e300f;
+  text-align: center;
 }
 
 header .slide .content p {
   margin-bottom: 10px;
   font-size: 2rem;
 }
+
+
 
 header .slide.current .content {
   opacity: 1;
@@ -297,12 +305,42 @@ header .slide:nth-child(3) {
 /* ABOUT */
 
 article.about {
-  padding: 40px 20px;
+  padding: 60px 20px;
   background-image: url("../img/bg-about.jpg");
   font-family: 'Roboto', sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+}
+
+article.about p span {
+  font-family: 'Pacifico', cursive;
+  color: #2e300f;
+  position: relative;
+  font-size: 2rem;
+}
+
+article.about p span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: calc(50% - 1px);
+  left: -30px;
+  width: 20px;
+  height: 2px;
+  background-color: #2e300f;
+}
+
+article.about p span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: calc(50% - 1px);
+  right: -30px;
+  width: 20px;
+  height: 2px;
+  background-color: #2e300f;
 }
 
 article.about h2 {
@@ -311,7 +349,8 @@ article.about h2 {
   color: #333;
   text-transform: uppercase;
   text-align: center;
-  padding: 10px 0 20px;
+  padding-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 article.about p {
@@ -334,11 +373,10 @@ article.about p {
 article.about img {
   width: 200px;
   height: 200px;
-  flex-basis: 30%;
 }
 
 article.about p button {
-  font-family: 'Roboto', serif;
+  font-family: 'Roboto', sans-serif;
   display: block;
   font-size: 1.8rem;
   border: 1px solid #2e300f;
@@ -361,18 +399,48 @@ article.about button i.fa-address-card {
 }
 
 /* PARTNERS */
+section.partners {
+  font-family: 'Roboto', sans-serif;
+  padding: 30px 0 50px;
+  text-align: center;
+}
+
+section.partners p span {
+  font-family: 'Pacifico', cursive;
+  color: #2e300f;
+  position: relative;
+  font-size: 2rem;
+}
+
+section.partners p span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: calc(50% - 1px);
+  left: -30px;
+  width: 20px;
+  height: 2px;
+  background-color: #2e300f;
+}
+
+section.partners p span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: calc(50% - 1px);
+  right: -30px;
+  width: 20px;
+  height: 2px;
+  background-color: #2e300f;
+}
+
 section.partners h3 {
   font-size: 3.5rem;
-  padding: 20px 0 10px;
+  padding: 0 0 10px;
   color: #333;
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
   text-align: center;
-}
-
-section.partners {
-  font-family: 'Roboto', sans-serif;
-  padding: 30px 0 50px;
 }
 
 .gallery {
@@ -404,17 +472,44 @@ section.partners {
 
 section.map {
   background: #000 url("../img/footer-bg.png") repeat;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
   color: #f2f2f2;
   padding: 10px 0 30px;
   font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+section.map p span {
+  font-family: 'Pacifico', cursive;
+  color: #575836;
+  position: relative;
+  font-size: 2rem;
+}
+
+section.map p span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: calc(50% - 1px);
+  left: -30px;
+  width: 20px;
+  height: 2px;
+  background-color: #575836;
+}
+
+section.map p span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: calc(50% - 1px);
+  right: -30px;
+  width: 20px;
+  height: 2px;
+  background-color: #575836;
 }
 
 section.map h3 {
   font-size: 3.5rem;
-  padding: 30px 0 20px;
+  padding: 0 0 20px;
   color: #f2f2f2;
   text-transform: uppercase;
 }
@@ -432,7 +527,7 @@ section.contact {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  color: #f2f2f2;
+  color: #F7DBA7;
   padding-bottom: 30px;
   font-family: 'Roboto', sans-serif;
 }
@@ -442,28 +537,25 @@ section.contact h3 {
   padding: 20px 0 20px;
   color: #f2f2f2;
   text-transform: uppercase;
+  text-align: center;
 }
 
 section.contact .address-wrap {
-  max-width: 1600px;
-  margin: 0 auto;
-  display: flex;
-  flex-flow: column wrap;
-  align-content: center;
+  flex-basis: 100%;
   text-align: center;
 }
 
 section.contact i {
-  margin: 20px 0 6px;
+  margin: 20px 10px 6px;
   font-size: 4rem;
 }
 
 section.contact p {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 section.contact p a {
-  color: #f2f2f2;
+  color: #F7DBA7;
   text-decoration: none;
 }
 
