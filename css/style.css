@@ -209,34 +209,38 @@ header .slide.current {
 
 header .slide .content {
   position: absolute;
-  bottom: 20px;
-  left: -600px;
+  bottom: -300px;
   opacity: 0;
-  width: 600px;
-  background-color: rgba(255, 255, 255, 0.8);
+  left: 0;
   color: #333;
-  padding: 15px 35px;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  padding: 10px;
   font-family: 'Roboto', sans-serif;
-  /* font-family: 'Pacifico', cursive; */
 }
 
 header .slide .content h1 {
   margin-bottom: 10px;
-  font-size: 3rem;
+  font-size: 2rem;
   color: #2e300f;
   text-align: center;
+  text-transform: uppercase;
 }
 
 header .slide .content p {
-  margin-bottom: 10px;
-  font-size: 2rem;
+  font-size: 1.4rem;
+  text-align: justify;
 }
 
-
+header .slide .content p span {
+  color: #2e300f;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 
 header .slide.current .content {
   opacity: 1;
-  transform: translateX(600px);
+  transform: translateY(-300px);
   transition: all 0.7s ease-in-out 0.3s;
 }
 
@@ -267,24 +271,56 @@ header .buttons button:hover {
   color: #333;
 }
 
-@media (max-width: 500px) {
-  header .slide .content {
-    bottom: -300px;
-    left: 0;
-    width: 100%;
-  }
-
-  header .slide.current .content {
-    transform: translateY(-300px);
-  }
-
+@media (min-width: 576px) {
   header .slide .content h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   header .slide .content p {
-    margin-bottom: 10px;
     font-size: 1.6rem;
+  }
+}
+
+@media (orientation: portrait) and (min-height: 641px) {
+  header .slide .content h1 {
+    font-size: 2.6rem;
+  }
+
+  header .slide .content p {
+    font-size: 1.8rem;
+    padding: 20px 30px
+  }
+}
+
+@media (min-width: 768px) {
+  header .slide .content h1 {
+    font-size: 4rem;
+  }
+
+  header .slide .content p {
+    font-size: 2.5rem;
+    padding: 20px 40px
+  }
+}
+
+@media (min-width: 992px) {
+  header .slide .content {
+    bottom: 20px;
+    left: -600px;
+    width: 1000px;
+    padding: 25px 35px;
+  }
+
+  header .slide.current .content {
+    transform: translateX(600px);
+  }
+
+  header .slide .content h1 {
+    font-size: 4rem;
+  }
+
+  header .slide .content p {
+    font-size: 2.5rem;
   }
 }
 
@@ -375,7 +411,7 @@ article.about img {
   height: 200px;
 }
 
-article.about p button {
+article.about p a {
   font-family: 'Roboto', sans-serif;
   display: block;
   font-size: 1.8rem;
@@ -388,13 +424,14 @@ article.about p button {
   box-shadow: 0 6px 6px -6px #666;
   transition: 0.2s linear;
   cursor: pointer;
+  text-decoration: none;
 }
 
-article.about p button:hover {
+article.about p a:hover {
   transform: scale(1.1);
 }
 
-article.about button i.fa-address-card {
+article.about a i.fa-address-card {
   margin-right: 10px;
 }
 
