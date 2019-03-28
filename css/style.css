@@ -20,6 +20,10 @@ body {
   flex-flow: row wrap;
 }
 
+p span {
+  font-family: 'Pacifico', cursive;
+}
+
 body>* {
   flex-basis: 100%;
 }
@@ -187,7 +191,8 @@ nav a:hover {
 
 header .slider {
   position: relative;
-  overflow: hidden;
+  top: 0;
+  left: 0;
   margin-top: 20vh;
   height: 80vh;
   width: 100%;
@@ -212,8 +217,8 @@ header .slide .content {
   bottom: -300px;
   opacity: 0;
   left: 0;
-  color: #333;
-  background-color: rgba(255, 255, 255, 0.8);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
   padding: 10px;
   font-family: 'Roboto', sans-serif;
@@ -222,7 +227,6 @@ header .slide .content {
 header .slide .content h1 {
   margin-bottom: 10px;
   font-size: 2rem;
-  color: #2e300f;
   text-align: center;
   text-transform: uppercase;
 }
@@ -232,16 +236,11 @@ header .slide .content p {
   text-align: justify;
 }
 
-header .slide .content p span {
-  color: #2e300f;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
 header .slide.current .content {
   opacity: 1;
   transform: translateY(-300px);
   transition: all 0.7s ease-in-out 0.3s;
+  z-index: 2;
 }
 
 header .buttons button.next {
@@ -264,6 +263,7 @@ header .buttons button {
   padding: 13px 15px;
   border-radius: 50%;
   outline: none;
+  z-index: 2;
 }
 
 header .buttons button:hover {
@@ -316,11 +316,11 @@ header .buttons button:hover {
   }
 
   header .slide .content h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   header .slide .content p {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -411,34 +411,158 @@ article.about img {
   height: 200px;
 }
 
-article.about p a {
+article.about div.btn a {
   font-family: 'Roboto', sans-serif;
   display: block;
   font-size: 1.8rem;
   border: 1px solid #2e300f;
   background-color: transparent;
   color: #2e300f;
+  margin: 20px 0 0;
   padding: 10px 20px;
   text-transform: uppercase;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   box-shadow: 0 6px 6px -6px #666;
   transition: 0.2s linear;
-  cursor: pointer;
   text-decoration: none;
 }
 
-article.about p a:hover {
-  transform: scale(1.1);
+article.about div.btn a:hover {
+  background-color: #2e300f;
+  color: white;
 }
 
-article.about a i.fa-address-card {
+article.about div.btn a i.fa-address-card {
   margin-right: 10px;
+}
+
+/* OFFERS */
+article.offers {
+  padding: 40px 0 30px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background: url('../img/food-2879265_1920.jpg') no-repeat fixed right/cover;
+
+}
+
+article.offers p span {
+  color: #2e300f;
+  position: relative;
+  font-size: 2rem;
+}
+
+article.offers p span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: calc(50% - 1px);
+  left: -30px;
+  width: 20px;
+  height: 2px;
+  background-color: #2e300f;
+}
+
+article.offers p span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: calc(50% - 1px);
+  right: -30px;
+  width: 20px;
+  height: 2px;
+  background-color: #2e300f;
+}
+
+article.offers h3 {
+  flex-basis: 100%;
+  font-size: 3.5rem;
+  color: #fff;
+  text-shadow: 0 6px 6px -6px #666;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: -10px;
+  padding-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+article.offers div.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+article.offers div.wrapper section.offer {
+  background-color: rgba(0, 0, 0, 0.6);
+  flex-basis: 100%;
+  margin: 10px 30px;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  transition: .2s linear;
+}
+
+@media (min-width: 1024px) {
+  article.offers div.wrapper section.offer {
+    flex-basis: 30%;
+    margin: 10px 0;
+  }
+}
+
+article.offers div.wrapper section.offer:hover {
+  background-color: #2e300f;
+}
+
+article.offers div.wrapper section.offer div.circle {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+article.offers div.wrapper section.offer div.circle i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 5rem;
+}
+
+article.offers div.wrapper section.offer div.text {
+  margin: 160px 30px 40px;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  text-align: justify;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+article.offers div.wrapper section.offer div.text h2 {
+  font-size: 3.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: -10px;
+  padding-bottom: 10px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* PARTNERS */
 section.partners {
   font-family: 'Roboto', sans-serif;
-  padding: 30px 0 50px;
+  padding: 40px 0 50px;
   text-align: center;
 }
 
@@ -480,24 +604,24 @@ section.partners h3 {
   text-align: center;
 }
 
-.gallery {
+section.partners .gallery {
   background: #fff;
 }
 
-.gallery-cell:first-child {
+section.partners .gallery-cell:first-child {
   width: 200px;
   height: 200px;
   margin-left: 50px;
   background: url('../img/logo-mobile-150x150.png') no-repeat center center/cover;
 }
 
-.gallery-cell:nth-child(2) {
+section.partners .gallery-cell:nth-child(2) {
   width: 300px;
   height: 200px;
   background: url('../img/slocinski-logo.png') no-repeat center center/cover;
 }
 
-.gallery-cell:nth-child(3) {
+section.partners .gallery-cell:nth-child(3) {
   width: 200px;
   height: 200px;
   margin-right: 10px;
@@ -510,7 +634,7 @@ section.partners h3 {
 section.map {
   background: #000 url("../img/footer-bg.png") repeat;
   color: #f2f2f2;
-  padding: 10px 0 30px;
+  padding: 40px 0 30px;
   font-family: 'Roboto', sans-serif;
   text-align: center;
 }
@@ -564,6 +688,7 @@ section.contact {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  align-items: center;
   color: #F7DBA7;
   padding-bottom: 30px;
   font-family: 'Roboto', sans-serif;
@@ -571,10 +696,41 @@ section.contact {
 
 section.contact h3 {
   font-size: 3.5rem;
-  padding: 20px 0 20px;
+  padding-bottom: 20px;
   color: #f2f2f2;
   text-transform: uppercase;
+  flex-basis: 100%;
   text-align: center;
+}
+
+section.contact p span {
+  font-family: 'Pacifico', cursive;
+  color: #575836;
+  position: relative;
+  font-size: 2rem;
+  flex-basis: 100%;
+}
+
+section.contact p span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: calc(50% - 1px);
+  left: -30px;
+  width: 20px;
+  height: 2px;
+  background-color: #575836;
+}
+
+section.contact p span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: calc(50% - 1px);
+  right: -30px;
+  width: 20px;
+  height: 2px;
+  background-color: #575836;
 }
 
 section.contact .address-wrap {
@@ -585,15 +741,40 @@ section.contact .address-wrap {
 section.contact i {
   margin: 20px 10px 6px;
   font-size: 4rem;
+  color: white;
 }
 
 section.contact p {
   font-size: 2.5rem;
 }
 
+section.contact p.name {
+  margin-bottom: 10px;
+}
+
 section.contact p a {
   color: #F7DBA7;
   text-decoration: none;
+  transition: .2s linear;
+}
+
+section.contact p.tel a {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  text-decoration: none;
+  background-color: transparent;
+  transition: .2s linear;
+}
+
+section.contact p.tel a:hover {
+  color: #333;
+  border: 1px solid #333;
+  background-color: #fff;
+}
+
+section.contact .email p a:hover {
+  color: white;
 }
 
 /* FOOTER */
