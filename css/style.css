@@ -13,6 +13,8 @@
 :root {
   font-size: 10px;
   font-family: 'Open Sans', sans-serif;
+  --main-color: #7f8054;
+  --text-gold: #f7dba7;
 }
 
 body {
@@ -20,12 +22,16 @@ body {
   flex-flow: row wrap;
 }
 
-p span {
-  font-family: 'Pacifico', cursive;
-}
-
 body>* {
   flex-basis: 100%;
+}
+
+h2,
+h3 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+  padding-bottom: 20px;
 }
 
 /* HEADER */
@@ -43,23 +49,33 @@ div.top {
   top: 0;
   left: 0;
   width: 100%;
-  height: 20vh;
-  background-color: #2e300f;
+  height: 10vh;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#beba8b+0,52542c+100 */
+  background: rgb(190, 186, 139);
+  /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(190, 186, 139, 1) 0%, rgba(82, 84, 44, 1) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(190, 186, 139, 1) 0%, rgba(82, 84, 44, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(190, 186, 139, 1) 0%, rgba(82, 84, 44, 1) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#beba8b', endColorstr='#52542c', GradientType=0);
+  /* IE6-9 */
   z-index: 999;
-  border-bottom: 2px solid #575836;
+  border-bottom: 2px solid var(--main-color);
 }
 
 .logo img,
 .burger {
   position: absolute;
-  top: 10vh;
+  top: 5vh;
   cursor: pointer;
 }
 
 .logo img {
   left: 50%;
-  width: 20vh;
-  height: 20vh;
+  width: 10vh;
+  height: 10vh;
   transform: translate(-50%, -50%);
 }
 
@@ -67,10 +83,11 @@ div.top {
 
 .burger {
   right: 5%;
-  font-size: 4rem;
-  color: #F7DBA7;
+  font-size: 3.4rem;
+  color: var(--text-gold);
   transform: translateY(-50%);
   z-index: 1;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
 i.off {
@@ -78,7 +95,7 @@ i.off {
 }
 
 i.fa-angle-up {
-  color: #F7DBA7;
+  color: var(--text-gold);
 }
 
 nav {
@@ -87,11 +104,22 @@ nav {
   width: 100%;
   top: 0;
   height: 100vh;
-  background-color: #2e300f;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#beba8b+0,52542c+100 */
+  background: rgb(190, 186, 139);
+  /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(190, 186, 139, 1) 0%, rgba(82, 84, 44, 1) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(190, 186, 139, 1) 0%, rgba(82, 84, 44, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(190, 186, 139, 1) 0%, rgba(82, 84, 44, 1) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#beba8b', endColorstr='#52542c', GradientType=0);
+  /* IE6-9 */
   transition: .4s;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
 }
 
 nav.off {
@@ -102,12 +130,13 @@ div.menu-socials {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
 
 .menu-socials i.fa-envelope,
 .menu-socials i.fa-facebook {
   display: block;
-  margin: 0 10px;
+  margin: 5px 10px;
   font-size: 5rem;
   animation: menu-socials 5s both infinite;
 }
@@ -116,30 +145,28 @@ nav ul {
   display: flex;
   flex-direction: column;
   list-style: none;
-  position: relative;
+  align-items: center;
 }
 
 nav li {
-  margin: 10px 0;
-  flex-basis: 25%;
+  flex-basis: 20%;
 }
 
 nav a {
   display: block;
   font-size: 3.5rem;
   text-align: center;
-  color: #858660;
+  color: rgba(247, 219, 167, 0.6);
   text-decoration: none;
   text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
 }
 
 nav a.active {
-  color: #F7DBA7;
+  color: var(--text-gold);
 }
 
 nav a:hover {
-  color: #F7DBA7;
+  color: var(--text-gold);
 }
 
 /* SOCIAL ICONS ANIMATION */
@@ -193,8 +220,8 @@ header .slider {
   position: relative;
   top: 0;
   left: 0;
-  margin-top: 20vh;
-  height: 80vh;
+  margin-top: 7vh;
+  height: 93vh;
   width: 100%;
 }
 
@@ -221,19 +248,19 @@ header .slide .content {
   background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
   padding: 10px;
-  font-family: 'Roboto', sans-serif;
 }
 
 header .slide .content h1 {
   margin-bottom: 10px;
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: center;
   text-transform: uppercase;
 }
 
 header .slide .content p {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   text-align: justify;
+  padding: 0 10px;
 }
 
 header .slide.current .content {
@@ -283,7 +310,7 @@ header .buttons button:hover {
 
 @media (orientation: portrait) and (min-height: 641px) {
   header .slide .content h1 {
-    font-size: 2.6rem;
+    font-size: 3rem;
   }
 
   header .slide .content p {
@@ -294,11 +321,11 @@ header .buttons button:hover {
 
 @media (min-width: 768px) {
   header .slide .content h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   header .slide .content p {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     padding: 20px 40px
   }
 }
@@ -308,7 +335,7 @@ header .buttons button:hover {
     bottom: 20px;
     left: -600px;
     width: 1000px;
-    padding: 25px 35px;
+    padding: 20px 30px;
   }
 
   header .slide.current .content {
@@ -316,11 +343,11 @@ header .buttons button:hover {
   }
 
   header .slide .content h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   header .slide .content p {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -343,53 +370,19 @@ header .slide:nth-child(3) {
 article.about {
   padding: 60px 20px;
   background-image: url("../img/bg-about.jpg");
-  font-family: 'Roboto', sans-serif;
-  /* font-family: 'Open Sans', sans-serif; */
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-}
-
-article.about p span {
-  font-family: 'Pacifico', cursive;
-  color: #2e300f;
-  position: relative;
-  font-size: 2rem;
-}
-
-article.about p span::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: calc(50% - 1px);
-  left: -30px;
-  width: 20px;
-  height: 2px;
-  background-color: #2e300f;
-}
-
-article.about p span::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: calc(50% - 1px);
-  right: -30px;
-  width: 20px;
-  height: 2px;
-  background-color: #2e300f;
+  align-items: center;
 }
 
 article.about h2 {
   flex-basis: 100%;
-  font-size: 3.5rem;
   color: #333;
-  text-transform: uppercase;
   text-align: center;
-  padding-bottom: 20px;
-  font-family: 'Open Sans', sans-serif;
 }
 
-article.about p {
+article.about .about-wrap p {
   font-size: 1.6rem;
   color: #333;
   text-align: justify;
@@ -397,8 +390,9 @@ article.about p {
   letter-spacing: 1px;
   flex-basis: 100%;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: center;
+  align-items: center;
   word-wrap: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -406,18 +400,46 @@ article.about p {
   hyphens: auto;
 }
 
+article.about .about-wrap {
+  flex-basis: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  article.about .about-wrap p {
+    flex-basis: 60%;
+    margin-left: 50px;
+  }
+
+  article.about .about-wrap {
+    flex-basis: 60%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+}
+
 article.about img {
   width: 200px;
   height: 200px;
+  flex-basis: 40%;
+}
+
+article.about .btn-wrap {
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 article.about div.btn a {
-  font-family: 'Roboto', sans-serif;
   display: block;
   font-size: 1.8rem;
-  border: 1px solid #2e300f;
+  border: 1px solid var(--main-color);
   background-color: transparent;
-  color: #2e300f;
+  color: var(--main-color);
   margin: 20px 0 0;
   padding: 10px 20px;
   text-transform: uppercase;
@@ -428,7 +450,7 @@ article.about div.btn a {
 }
 
 article.about div.btn a:hover {
-  background-color: #2e300f;
+  background-color: var(--main-color);
   color: white;
 }
 
@@ -447,55 +469,23 @@ article.offers {
 
 }
 
-article.offers p span {
-  color: #2e300f;
-  position: relative;
-  font-size: 2rem;
-}
-
-article.offers p span::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: calc(50% - 1px);
-  left: -30px;
-  width: 20px;
-  height: 2px;
-  background-color: #2e300f;
-}
-
-article.offers p span::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: calc(50% - 1px);
-  right: -30px;
-  width: 20px;
-  height: 2px;
-  background-color: #2e300f;
-}
-
 article.offers h3 {
   flex-basis: 100%;
-  font-size: 3.5rem;
-  color: #fff;
-  text-shadow: 0 6px 6px -6px #666;
-  text-transform: uppercase;
+  color: #f2f2f2;
   text-align: center;
   margin-top: -10px;
-  padding-bottom: 20px;
-  font-family: 'Open Sans', sans-serif;
 }
 
 article.offers div.wrapper {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
 article.offers div.wrapper section.offer {
   background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 6px 6px -6px #666;
   flex-basis: 100%;
   margin: 10px 30px;
   position: relative;
@@ -513,7 +503,7 @@ article.offers div.wrapper section.offer {
 }
 
 article.offers div.wrapper section.offer:hover {
-  background-color: #2e300f;
+  background-color: var(--main-color);
 }
 
 article.offers div.wrapper section.offer div.circle {
@@ -539,7 +529,6 @@ article.offers div.wrapper section.offer div.circle i {
 article.offers div.wrapper section.offer div.text {
   margin: 160px 30px 40px;
   color: #fff;
-  font-family: 'Open Sans', sans-serif;
   font-size: 1.6rem;
   text-align: justify;
   word-wrap: break-word;
@@ -556,51 +545,16 @@ article.offers div.wrapper section.offer div.text h2 {
   text-align: center;
   margin-top: -10px;
   padding-bottom: 10px;
-  font-family: 'Open Sans', sans-serif;
 }
 
 /* PARTNERS */
 section.partners {
-  font-family: 'Roboto', sans-serif;
   padding: 40px 0 50px;
   text-align: center;
 }
 
-section.partners p span {
-  font-family: 'Pacifico', cursive;
-  color: #2e300f;
-  position: relative;
-  font-size: 2rem;
-}
-
-section.partners p span::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: calc(50% - 1px);
-  left: -30px;
-  width: 20px;
-  height: 2px;
-  background-color: #2e300f;
-}
-
-section.partners p span::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: calc(50% - 1px);
-  right: -30px;
-  width: 20px;
-  height: 2px;
-  background-color: #2e300f;
-}
-
 section.partners h3 {
-  font-size: 3.5rem;
-  padding: 0 0 10px;
   color: #333;
-  text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
   text-align: center;
 }
 
@@ -635,44 +589,12 @@ section.map {
   background: #000 url("../img/footer-bg.png") repeat;
   color: #f2f2f2;
   padding: 40px 0 30px;
-  font-family: 'Roboto', sans-serif;
   text-align: center;
 }
 
-section.map p span {
-  font-family: 'Pacifico', cursive;
-  color: #575836;
-  position: relative;
-  font-size: 2rem;
-}
-
-section.map p span::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: calc(50% - 1px);
-  left: -30px;
-  width: 20px;
-  height: 2px;
-  background-color: #575836;
-}
-
-section.map p span::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: calc(50% - 1px);
-  right: -30px;
-  width: 20px;
-  height: 2px;
-  background-color: #575836;
-}
-
 section.map h3 {
-  font-size: 3.5rem;
-  padding: 0 0 20px;
+  padding-bottom: 20px;
   color: #f2f2f2;
-  text-transform: uppercase;
 }
 
 #map {
@@ -686,56 +608,47 @@ section.map h3 {
 section.contact {
   background: #000 url("../img/footer-bg.png") repeat;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  color: #F7DBA7;
+  color: var(--text-gold);
   padding-bottom: 30px;
-  font-family: 'Roboto', sans-serif;
 }
 
-section.contact h3 {
-  font-size: 3.5rem;
-  padding-bottom: 20px;
-  color: #f2f2f2;
-  text-transform: uppercase;
+section.contact .text-wrap {
   flex-basis: 100%;
   text-align: center;
 }
 
-section.contact p span {
-  font-family: 'Pacifico', cursive;
-  color: #575836;
-  position: relative;
-  font-size: 2rem;
+section.contact h3 {
+  color: #f2f2f2;
   flex-basis: 100%;
-}
-
-section.contact p span::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: calc(50% - 1px);
-  left: -30px;
-  width: 20px;
-  height: 2px;
-  background-color: #575836;
-}
-
-section.contact p span::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: calc(50% - 1px);
-  right: -30px;
-  width: 20px;
-  height: 2px;
-  background-color: #575836;
 }
 
 section.contact .address-wrap {
   flex-basis: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
   text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.address-wrap * {
+  flex-basis: 100%;
+}
+
+@media (min-width: 756px) {
+  .address-wrap * {
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .address-wrap * {
+    flex-basis: 25%;
+  }
 }
 
 section.contact i {
@@ -745,7 +658,7 @@ section.contact i {
 }
 
 section.contact p {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 section.contact p.name {
@@ -753,7 +666,7 @@ section.contact p.name {
 }
 
 section.contact p a {
-  color: #F7DBA7;
+  color: var(--text-gold);
   text-decoration: none;
   transition: .2s linear;
 }
@@ -780,22 +693,28 @@ section.contact .email p a:hover {
 /* FOOTER */
 
 footer section.copy {
-  padding: 40px 0;
+  padding: 5px 0;
   width: 100%;
-  height: 10vh;
-  border-top: 2px solid #575836;
-  background-color: #2e300f;
-  font-size: 2rem;
-  text-align: center;
+  border-top: 2px solid var(--main-color);
+  background: rgb(190, 186, 139);
+  /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(190, 186, 139, 1) 0%, rgba(82, 84, 44, 1) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(190, 186, 139, 1) 0%, rgba(82, 84, 44, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(190, 186, 139, 1) 0%, rgba(82, 84, 44, 1) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#beba8b', endColorstr='#52542c', GradientType=0);
+  /* IE6-9 */
+  font-size: 1.6rem;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
-  color: #858660;
-  font-family: 'Roboto', sans-serif;
+  align-items: center;
+  color: #e9e9e9;
 }
 
 footer section.copy p span {
-  color: #F7DBA7;
+  color: var(--text-gold);
 }
 
 footer section.copy p a {
