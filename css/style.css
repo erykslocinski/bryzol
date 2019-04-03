@@ -45,6 +45,7 @@ header>* {
 }
 
 div.top {
+  z-index: 999;
   position: fixed;
   top: 0;
   left: 0;
@@ -61,7 +62,6 @@ div.top {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#beba8b', endColorstr='#52542c', GradientType=0);
   /* IE6-9 */
-  z-index: 999;
   border-bottom: 2px solid var(--main-color);
 }
 
@@ -82,11 +82,11 @@ div.top {
 /* BURGER MENU */
 
 .burger {
+  z-index: 1;
   right: 5%;
+  transform: translateY(-50%);
   font-size: 3.4rem;
   color: var(--text-gold);
-  transform: translateY(-50%);
-  z-index: 1;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -99,11 +99,15 @@ i.fa-angle-up {
 }
 
 nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: fixed;
   left: 0;
-  width: 100%;
   top: 0;
+  width: 100%;
   height: 100vh;
+  transition: .4s;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#beba8b+0,52542c+100 */
   background: rgb(190, 186, 139);
   /* Old browsers */
@@ -115,10 +119,6 @@ nav {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#beba8b', endColorstr='#52542c', GradientType=0);
   /* IE6-9 */
-  transition: .4s;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
 }
 
@@ -144,8 +144,8 @@ div.menu-socials {
 nav ul {
   display: flex;
   flex-direction: column;
-  list-style: none;
   align-items: center;
+  list-style: none;
 }
 
 nav li {
@@ -154,7 +154,7 @@ nav li {
 
 nav a {
   display: block;
-  font-size: 3.5rem;
+  font-size: 3rem;
   text-align: center;
   color: rgba(247, 219, 167, 0.6);
   text-decoration: none;
@@ -211,7 +211,6 @@ nav a:hover {
   100% {
     transform: rotate(0);
   }
-
 }
 
 /* SLIDER */
@@ -220,8 +219,8 @@ header .slider {
   position: relative;
   top: 0;
   left: 0;
-  margin-top: 7vh;
   height: 93vh;
+  margin-top: 7vh;
   width: 100%;
 }
 
@@ -240,57 +239,80 @@ header .slide.current {
 }
 
 header .slide .content {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   bottom: -300px;
   opacity: 0;
   left: 0;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
   padding: 10px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 header .slide .content h1 {
-  margin-bottom: 10px;
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
 }
 
 header .slide .content p {
-  font-size: 1.6rem;
-  text-align: justify;
   padding: 0 10px;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+header .slide .content .slider-btn a {
+  display: block;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border: 1px solid var(--main-color);
+  background-color: white;
+  color: var(--main-color);
+  text-transform: uppercase;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: 0.2s linear;
+}
+
+header .slide .content .slider-btn a:hover {
+  background-color: var(--main-color);
+  color: white;
 }
 
 header .slide.current .content {
+  z-index: 2;
   opacity: 1;
   transform: translateY(-300px);
   transition: all 0.7s ease-in-out 0.3s;
-  z-index: 2;
+}
+
+header .buttons button.next,
+header .buttons button.prev {
+  position: absolute;
+  top: 50%;
 }
 
 header .buttons button.next {
-  position: absolute;
-  top: 50%;
   right: 15px;
 }
 
 header .buttons button.prev {
-  position: absolute;
-  top: 50%;
   left: 15px;
 }
 
 header .buttons button {
+  z-index: 2;
+  padding: 13px 15px;
   border: 2px solid #fff;
+  border-radius: 50%;
   background-color: transparent;
   color: #fff;
   cursor: pointer;
-  padding: 13px 15px;
-  border-radius: 50%;
   outline: none;
-  z-index: 2;
 }
 
 header .buttons button:hover {
@@ -315,7 +337,6 @@ header .buttons button:hover {
 
   header .slide .content p {
     font-size: 1.8rem;
-    padding: 20px 30px
   }
 }
 
@@ -326,7 +347,6 @@ header .buttons button:hover {
 
   header .slide .content p {
     font-size: 1.8rem;
-    padding: 20px 40px
   }
 }
 
@@ -335,7 +355,6 @@ header .buttons button:hover {
     bottom: 20px;
     left: -600px;
     width: 1000px;
-    padding: 20px 30px;
   }
 
   header .slide.current .content {
@@ -343,11 +362,12 @@ header .buttons button:hover {
   }
 
   header .slide .content h1 {
-    font-size: 3rem;
+    font-size: 2.6rem;
   }
 
   header .slide .content p {
     font-size: 1.8rem;
+    padding: 10px 5px;
   }
 }
 
@@ -368,12 +388,12 @@ header .slide:nth-child(3) {
 /* ABOUT */
 
 article.about {
-  padding: 60px 20px;
-  background-image: url("../img/bg-about.jpg");
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  padding: 60px 20px;
+  background-image: url("../img/bg-about.jpg");
 }
 
 article.about h2 {
@@ -383,16 +403,16 @@ article.about h2 {
 }
 
 article.about .about-wrap p {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
   font-size: 1.6rem;
   color: #333;
   text-align: justify;
   line-height: 150%;
   letter-spacing: 1px;
-  flex-basis: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
   word-wrap: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -422,9 +442,9 @@ article.about .about-wrap {
 }
 
 article.about img {
+  flex-basis: 40%;
   width: 200px;
   height: 200px;
-  flex-basis: 40%;
 }
 
 article.about .btn-wrap {
@@ -437,16 +457,16 @@ article.about .btn-wrap {
 article.about div.btn a {
   display: block;
   font-size: 1.8rem;
+  margin: 20px 0 0;
+  padding: 10px 20px;
   border: 1px solid var(--main-color);
   background-color: transparent;
   color: var(--main-color);
-  margin: 20px 0 0;
-  padding: 10px 20px;
   text-transform: uppercase;
   /* margin-top: 20px; */
   box-shadow: 0 6px 6px -6px #666;
-  transition: 0.2s linear;
   text-decoration: none;
+  transition: 0.2s linear;
 }
 
 article.about div.btn a:hover {
@@ -460,20 +480,20 @@ article.about div.btn a i.fa-address-card {
 
 /* OFFERS */
 article.offers {
-  padding: 40px 0 30px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  padding: 40px 0 30px;
   background: url('../img/food-2879265_1920.jpg') no-repeat fixed right/cover;
 
 }
 
 article.offers h3 {
   flex-basis: 100%;
+  margin-top: -10px;
   color: #f2f2f2;
   text-align: center;
-  margin-top: -10px;
 }
 
 article.offers div.wrapper {
@@ -484,13 +504,13 @@ article.offers div.wrapper {
 }
 
 article.offers div.wrapper section.offer {
-  background-color: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 6px 6px -6px #666;
   flex-basis: 100%;
-  margin: 10px 30px;
   position: relative;
   top: 0;
   left: 0;
+  margin: 10px 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 6px 6px -6px #666;
   cursor: pointer;
   transition: .2s linear;
 }
@@ -522,8 +542,8 @@ article.offers div.wrapper section.offer div.circle i {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
   font-size: 5rem;
+  color: #fff;
 }
 
 article.offers div.wrapper section.offer div.text {
@@ -539,12 +559,12 @@ article.offers div.wrapper section.offer div.text {
 }
 
 article.offers div.wrapper section.offer div.text h2 {
+  margin-top: -10px;
+  padding-bottom: 10px;
   font-size: 3.5rem;
   color: #fff;
   text-transform: uppercase;
   text-align: center;
-  margin-top: -10px;
-  padding-bottom: 10px;
 }
 
 /* PARTNERS */
@@ -586,9 +606,9 @@ section.partners .gallery-cell:nth-child(3) {
 /* MAP */
 
 section.map {
+  padding: 40px 0 30px;
   background: #000 url("../img/footer-bg.png") repeat;
   color: #f2f2f2;
-  padding: 40px 0 30px;
   text-align: center;
 }
 
@@ -606,13 +626,13 @@ section.map h3 {
 /* CONTACT */
 
 section.contact {
-  background: #000 url("../img/footer-bg.png") repeat;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  color: var(--text-gold);
   padding-bottom: 30px;
+  background: #000 url("../img/footer-bg.png") repeat;
+  color: var(--text-gold);
 }
 
 section.contact .text-wrap {
@@ -621,8 +641,8 @@ section.contact .text-wrap {
 }
 
 section.contact h3 {
-  color: #f2f2f2;
   flex-basis: 100%;
+  color: #f2f2f2;
 }
 
 section.contact .address-wrap {
@@ -631,7 +651,7 @@ section.contact .address-wrap {
   flex-flow: row wrap;
   justify-content: center;
   text-align: center;
-  width: 100%;
+  width: 80%;
   height: 100%;
 }
 
@@ -672,17 +692,17 @@ section.contact p a {
 }
 
 section.contact p.tel a {
-  color: #fff;
-  border: 1px solid #fff;
   padding: 5px 10px;
+  border: 1px solid #fff;
+  color: #fff;
   text-decoration: none;
   background-color: transparent;
   transition: .2s linear;
 }
 
 section.contact p.tel a:hover {
-  color: #333;
   border: 1px solid #333;
+  color: #333;
   background-color: #fff;
 }
 
@@ -693,8 +713,11 @@ section.contact .email p a:hover {
 /* FOOTER */
 
 footer section.copy {
-  padding: 5px 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
   width: 100%;
+  padding: 5px 0;
   border-top: 2px solid var(--main-color);
   background: rgb(190, 186, 139);
   /* Old browsers */
@@ -707,9 +730,6 @@ footer section.copy {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#beba8b', endColorstr='#52542c', GradientType=0);
   /* IE6-9 */
   font-size: 1.6rem;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
   color: #e9e9e9;
 }
 
