@@ -265,24 +265,6 @@ header .slide .content p {
   text-align: justify;
 }
 
-header .slide .content .slider-btn a {
-  display: block;
-  font-size: 1.2rem;
-  padding: 5px 10px;
-  border: 1px solid var(--main-color);
-  background-color: white;
-  color: var(--main-color);
-  text-transform: uppercase;
-  margin-top: 10px;
-  text-decoration: none;
-  transition: 0.2s linear;
-}
-
-header .slide .content .slider-btn a:hover {
-  background-color: var(--main-color);
-  color: white;
-}
-
 header .slide.current .content {
   z-index: 2;
   opacity: 1;
@@ -347,6 +329,7 @@ header .buttons button:hover {
 
   header .slide .content p {
     font-size: 1.8rem;
+    padding: 0 20px;
   }
 }
 
@@ -367,7 +350,7 @@ header .buttons button:hover {
 
   header .slide .content p {
     font-size: 1.8rem;
-    padding: 10px 5px;
+    padding: 10px 40px;
   }
 }
 
@@ -458,7 +441,7 @@ article.about div.btn a {
   display: block;
   font-size: 1.8rem;
   margin: 20px 0 0;
-  padding: 10px 20px;
+  padding: 10px 30px;
   border: 1px solid var(--main-color);
   background-color: transparent;
   color: var(--main-color);
