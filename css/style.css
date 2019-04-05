@@ -1,5 +1,4 @@
 /*
-  font-family: 'Roboto', sans-serif;
   font-family: 'Pacifico', cursive;
   font-family: 'Open Sans', sans-serif;
 */
@@ -107,7 +106,7 @@ nav {
   top: 0;
   width: 100%;
   height: 100vh;
-  transition: .4s;
+  transition: .3s ease-in-out;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#beba8b+0,52542c+100 */
   background: rgb(190, 186, 139);
   /* Old browsers */
@@ -233,6 +232,17 @@ header .slide {
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
 }
+
+/* header .slide::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+} */
 
 header .slide.current {
   opacity: 1;
@@ -469,7 +479,6 @@ article.offers {
   align-items: center;
   padding: 40px 0 30px;
   background: url('../img/food-2879265_1920.jpg') no-repeat fixed right/cover;
-
 }
 
 article.offers h3 {
@@ -493,7 +502,8 @@ article.offers div.wrapper section.offer {
   left: 0;
   margin: 10px 30px;
   background-color: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 6px 6px -6px #666;
+  box-shadow: 0 10px 6px -6px #777;
+  border-radius: 8px;
   cursor: pointer;
   transition: .2s linear;
 }
@@ -723,4 +733,113 @@ footer section.copy p span {
 footer section.copy p a {
   text-decoration: none;
   color: #858660;
+}
+
+/* ABOUT US - HEADER */
+
+header div.wrapper-about-us {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 93vh;
+  margin-top: 7vh;
+  width: 100%;
+}
+
+header div.photo-about-us {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../img/1.jpg') no-repeat fixed center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header div.photo-about-us::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+header div.photo-about-us h2 {
+  z-index: 2;
+  color: white;
+}
+
+/* ABOUT US - SECTION */
+
+section.wrapper-about-us {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../img/bg-about.jpg');
+}
+
+article.about-us {
+  width: 90%;
+  margin: 40px 0;
+  box-shadow: 0 10px 6px -6px #777;
+  transition: .2s linear;
+  border-radius: 8px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  background-color: var(--main-color);
+}
+
+article.about-us:hover {
+  box-shadow: 0 10px 16px -2px #777;
+}
+
+@media (min-width: 533px) {
+  article.about-us {
+    padding: 30px 50px;
+  }
+}
+
+@media (min-width: 1024px) {
+  article.about-us {
+    flex-basis: 30%;
+    margin: 60px;
+    padding: 30px 50px;
+  }
+}
+
+article.about-us .line {
+  background-color: rgba(247, 219, 167, 0.2);
+  height: 1px;
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+article.about-us .avatar img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+article.about-us h3.name {
+  color: var(--text-gold);
+  font-size: 3rem;
+  text-align: center;
+}
+
+article.about-us p.discription {
+  font-size: 1.6rem;
+  text-align: justify;
+  text-indent: 4rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 150%;
+  letter-spacing: 1px;
 }
