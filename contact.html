@@ -41,9 +41,39 @@
     </div>
   </header>
 
-  <section class="wrapper-contact">
+  <section class="contact-page">
     <h2 class="pages-title">Kontakt</h2>
-    <h3>Wkrótce...</h3>
+    <section class="contact-wrapper">
+      <section class="contact-map">
+        <div id="map"></div>
+      </section>
+      <section class="contact-form">
+        <form class="form" id="contactForm" method="post" novalidate action="send-script.php">
+          <div class="form-row">
+            <label for="field-name">Imię i nazwisko <span class="req-red">*</span></label>
+            <input type="text" name="name" required id="field-name" data-error="Wypełnij to pole"
+              pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻŹŹ ]+">
+          </div>
+          <div class="form-row">
+            <label for="field-email">Email <span class="req-red">*</span></label>
+            <input type="email" name="email" required id="field-email" data-error="Wpisz poprawny email"
+              pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+          </div>
+          <div class="form-row">
+            <label for="field-message">Wiadomość <span class="req-red">*</span></label>
+            <textarea name="message" required data-error="Musisz wypełnić pole" id="field-message"
+              pattern=".+"></textarea>
+          </div>
+          <span class="form-row honey-row">
+            <label for="honey">Jeżeli jesteś człowiekiem, nie wypełniaj tego pola</label>
+            <input type="text" name="honey">
+          </span>
+          <div class="form-row">
+            <button type="submit" class="submit-btn">Wyślij</button>
+          </div>
+        </form>
+      </section>
+    </section>
   </section>
 
   <footer>
@@ -55,6 +85,11 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/menu-burger.js"></script>
+  <script src="js/contact-mail.js"></script>
+  <script src="js/gmaps.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCE_EfFijcmiSdcMM7wJlYN789-ugSMuI8&callback=initMap">
+  </script>
 </body>
 
 </html>
