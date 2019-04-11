@@ -1661,9 +1661,12 @@ section.contact-wrapper .contact-tel .email i {
     order: 4;
   }
 
+  section.contact-wrapper .contact-tel {
+    order: 3;
+  }
+
   section.contact-wrapper .contact-tel .contact-tel-wrap .telephone {
     flex-basis: 50%;
-    order: 3;
   }
 
   section.contact-wrapper .contact-tel .contact-tel-wrap .telephone:nth-child(1) {
