@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Pacifico&amp;subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -43,7 +44,32 @@
 
   <section class="wrapper-gallery">
     <h2 class="pages-title">Galeria</h2>
-    <h3>Wkrótce...</h3>
+    <p class="imglist">
+      <a href="img/1.jpg" data-fancybox="images">
+        <img src="img/1.jpg" />
+      </a>
+
+      <a href="img/2.jpg" data-fancybox="images">
+        <img src="img/2.jpg" />
+      </a>
+
+      <a href="img/3.jpg" data-fancybox="images">
+        <img src="img/3.jpg" />
+      </a>
+
+      <a href="img/1.jpg" data-fancybox="images">
+        <img src="img/1.jpg" />
+      </a>
+
+      <a href="img/2.jpg" data-fancybox="images">
+        <img src="img/2.jpg" />
+      </a>
+
+      <a href="img/3.jpg" data-fancybox="images">
+        <img src="img/3.jpg" />
+      </a>
+    </p>
+
   </section>
 
   <footer>
@@ -55,6 +81,19 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/menu-burger.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <script>
+    $('[data-fancybox="images"]').fancybox({
+      afterLoad: function (instance, current) {
+        var pixelRatio = window.devicePixelRatio || 1;
+
+        if (pixelRatio > 1.5) {
+          current.width = current.width / pixelRatio;
+          current.height = current.height / pixelRatio;
+        }
+      }
+    });
+  </script>
 </body>
 
 </html>
