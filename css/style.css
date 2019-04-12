@@ -1615,16 +1615,19 @@ section.contact-wrapper .contact-tel .contact-tel-wrap .telephone p.after-name {
   margin-bottom: 20px;
 }
 
-section.contact-wrapper .contact-tel .contact-tel-wrap .telephone p a {
+section.contact-wrapper .contact-tel .contact-tel-wrap .telephone a {
+  display: block;
   text-decoration: none;
   color: #333;
   transition: .2s linear;
-  padding: 0;
 }
 
-section.contact-wrapper .contact-tel .contact-tel-wrap .telephone p a:hover {
+section.contact-wrapper .contact-tel .contact-tel-wrap .telephone a:hover {
   background-color: rgb(95, 95, 62);
-  padding: 5px 10px;
+  color: var(--text-white);
+}
+
+section.contact-wrapper .contact-tel .contact-tel-wrap .telephone a:hover i {
   color: var(--text-white);
 }
 
@@ -1641,6 +1644,7 @@ section.contact-wrapper .contact-tel .email i {
   font-size: 3.5rem;
   padding: 10px 0;
   color: var(--main-color);
+  transition: .2s linear;
 }
 
 /* ***************************************************************************************************** */
