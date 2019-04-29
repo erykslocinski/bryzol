@@ -813,10 +813,10 @@ section.partners .gallery {
 }
 
 section.partners a:first-child {
-  width: 200px;
+  width: 460px;
   height: 200px;
-  margin-left: 50px;
-  background-image: url('../img/logo-mobile-150x150.png');
+  margin-left: -80px;
+  background-image: url('../img/pdh_460x325.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -825,7 +825,7 @@ section.partners a:first-child {
 section.partners a:nth-child(2) {
   width: 300px;
   height: 200px;
-  background-image: url('../img/slocinski-logo.png');
+  background-image: url('../img/slocinski_360x226.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -836,7 +836,7 @@ section.partners a:nth-child(3) {
   height: 200px;
   margin-right: 10px;
   margin-left: 50px;
-  background-image: url('../img/logo-bryzol-strona-300x300.png');
+  background-image: url('../img/grej_360x255.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
