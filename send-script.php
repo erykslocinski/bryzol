@@ -1,7 +1,7 @@
 <?php
 error_reporting(0);
 
-$mailToSend = 'eryk.slocinski@gmail.com';
+$mailToSend = 'kontakt@bryzol.pl';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$name = $_POST['name'];

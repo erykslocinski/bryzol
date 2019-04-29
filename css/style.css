@@ -508,15 +508,24 @@ header .buttons button:hover {
 /* ---------------------------------------------------- */
 
 header .slide:first-child {
-  background: url('../img/1.jpg') no-repeat center right/cover;
+  background-image: url('../img/1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 header .slide:nth-child(2) {
-  background: url('../img/2.jpg') no-repeat center center/cover;
+  background-image: url('../img/2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 header .slide:nth-child(3) {
-  background: url('../img/3.jpg') no-repeat center center/cover;
+  background-image: url('../img/3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* ---------------------------------------------------- */
@@ -680,11 +689,16 @@ article.offers {
   -ms-flex-align: center;
   align-items: center;
   padding: 60px 20px;
-  background: url('../img/main-offers-bg.jpg') no-repeat fixed right/cover;
+  background-image: url('../img/main-offers-bg.jpg');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  width: 100vw;
+  height: 100%;
 }
 
 article.offers h3 {
-  -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
   margin-top: -10px;
   color: var(--text-white);
@@ -705,14 +719,14 @@ article.offers div.wrapper {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 article.offers div.wrapper section.offer {
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
   position: relative;
-  top: 0;
-  left: 0;
   margin: 10px 0px;
   background-color: rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0 10px 6px -6px #777;
@@ -785,6 +799,8 @@ article.offers div.wrapper section.offer div.text h2 {
 section.partners {
   padding: 60px 0;
   text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
 section.partners h3 {
@@ -800,13 +816,19 @@ section.partners a:first-child {
   width: 200px;
   height: 200px;
   margin-left: 50px;
-  background: url('../img/logo-mobile-150x150.png') no-repeat center center/cover;
+  background-image: url('../img/logo-mobile-150x150.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 section.partners a:nth-child(2) {
   width: 300px;
   height: 200px;
-  background: url('../img/slocinski-logo.png') no-repeat center center/cover;
+  background-image: url('../img/slocinski-logo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 section.partners a:nth-child(3) {
@@ -814,7 +836,10 @@ section.partners a:nth-child(3) {
   height: 200px;
   margin-right: 10px;
   margin-left: 50px;
-  background: url('../img/logo-bryzol-strona-300x300.png') no-repeat center center/cover;
+  background-image: url('../img/logo-bryzol-strona-300x300.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* ---------------------------------------------------- */
@@ -827,6 +852,7 @@ section.map {
   color: var(--text-white);
   text-align: center;
   height: 80vh;
+  width: 100%;
 }
 
 section.map h3 {
@@ -858,6 +884,8 @@ section.contact {
   -ms-flex-align: center;
   align-items: center;
   padding: 100px 20px 60px;
+  width: 100%;
+  height: 100%;
   background: #000 url("../img/footer-bg.png") repeat;
   color: var(--text-gold);
 }
@@ -1018,7 +1046,12 @@ header div.photo-about-us {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('../img/about-photo.jpg') no-repeat fixed center/cover;
+  /* background: url('../img/about-photo.jpg') no-repeat fixed center/cover; */
+  background-image: url('../img/about-photo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1176,7 +1209,12 @@ header div.photo-offers {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('../img/offer-photo.jpg') no-repeat fixed top/cover;
+  /* background: url('../img/offer-photo.jpg') no-repeat fixed top/cover; */
+  background-image: url('../img/offer-photo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1365,7 +1403,12 @@ header div.photo-gallery {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('../img/gallery-photo.jpg') no-repeat fixed top/cover;
+  /* background: url('../img/gallery-photo.jpg') no-repeat fixed top/cover; */
+  background-image: url('../img/gallery-photo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1434,6 +1477,34 @@ p.imglist a img {
   background-size: cover;
 }
 
+.pagination {
+  font-size: 1.6rem;
+}
+
+.pagination ul {
+  display: flex;
+  list-style: none;
+}
+
+.pagination ul li {
+  margin: 20px 5px;
+}
+
+.pagination ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+}
+
+.pagination ul li a:hover {
+  background-color: var(--main-color);
+}
+
+.pagination .active {
+  background-color: var(--main-color);
+
+}
+
 @media (min-width: 533px) {
   p.imglist a img {
     width: 30vw;
@@ -1445,6 +1516,8 @@ p.imglist a img {
   p.imglist a img {
     width: 20vw;
     height: 20vw;
+    background-position: center center;
+    background-size: cover;
     padding: 10px;
   }
 }
@@ -1459,7 +1532,12 @@ header div.photo-contact {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('../img/contact-photo.jpg') no-repeat fixed top/cover;
+  /* background: url('../img/contact-photo.jpg') no-repeat fixed top/cover; */
+  background-image: url('../img/contact-photo.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
