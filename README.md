@@ -18,7 +18,7 @@ Web page with mobile-first concept.
 http://bryzol.pl/
 
 To-do list:
-* [ ] Slider and header isn't visible for all.
+* [x] Slider and header isn't visible for all.
 
 ## Status
 _finished_
