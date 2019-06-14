@@ -52,6 +52,7 @@ header {
   -webkit-box-direction: normal;
   -ms-flex-flow: column wrap;
   flex-flow: column wrap;
+  height: 100vh;
 }
 
 header>* {
@@ -1045,7 +1046,7 @@ header div.photo-about-us {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 70%;
   /* background: url('../img/about-photo.jpg') no-repeat fixed center/cover; */
   background-image: url('../img/about-photo.jpg');
   background-size: cover;
@@ -1094,6 +1095,7 @@ section.wrapper-about-us {
   align-items: center;
   background-image: url('../img/bg-about.jpg');
   padding: 60px 20px;
+  margin-top: -20vh;
 }
 
 section.wrapper-about-us h2 {
@@ -1208,7 +1210,7 @@ header div.photo-offers {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 70%;
   /* background: url('../img/offer-photo.jpg') no-repeat fixed top/cover; */
   background-image: url('../img/offer-photo.jpg');
   background-size: cover;
@@ -1257,6 +1259,7 @@ section.wrapper-offers {
   align-items: center;
   padding: 60px 20px;
   background-image: url("../img/bg-about.jpg");
+  margin-top: -20vh;
 }
 
 section.wrapper-offers h2 {
@@ -1402,7 +1405,7 @@ header div.photo-gallery {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 70%;
   /* background: url('../img/gallery-photo.jpg') no-repeat fixed top/cover; */
   background-image: url('../img/gallery-photo.jpg');
   background-size: cover;
@@ -1451,6 +1454,7 @@ section.wrapper-gallery {
   align-items: center;
   padding: 60px 0;
   background-image: url("../img/bg-about.jpg");
+  margin-top: -20vh;
 }
 
 p.imglist {
@@ -1531,7 +1535,7 @@ header div.photo-contact {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 70vh;
   /* background: url('../img/contact-photo.jpg') no-repeat fixed top/cover; */
   background-image: url('../img/contact-photo.jpg');
   background-size: cover;
@@ -1580,6 +1584,7 @@ section.contact-page {
   align-items: center;
   padding: 60px 0;
   background-image: url("../img/bg-about.jpg");
+  margin-top: -20vh;
 }
 
 section.wrapper-contact h2 {
